@@ -1,0 +1,103 @@
+.hero {
+    padding: 178px 0;
+    background-color: #F9F6F5;
+    position: relative;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (laptop) {
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        max-width: 621px;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+
+        @include a (laptop) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: toRem(56);
+        line-height: 70px;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 30px;
+
+        @include a (laptop) {
+            text-align: center;
+            font-size: toRem(45);
+        }
+
+        @include a (tablet) {
+            font-size: toRem(30);
+            line-height: 45px;
+        }
+
+        @include a (mobile) {
+            font-size: toRem(25);
+            line-height: 30px;
+        }
+    }
+
+    &__descr {
+        font-size: toRem(20);
+        line-height: 32px;
+        max-width: 516px;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @include a (laptop) {
+            text-align: center;
+        }
+    }
+
+    &__form {
+        width: 326px;
+        padding: 8px;
+        display: flex;
+        margin-bottom: 60px;
+
+        @include a (laptop) {
+            justify-content: center;
+        }
+
+        &-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #402F2C;
+        }
+    }
+
+    &__btn {
+        font-size: toRem(18);
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        width: 148px;
+        line-height: 56px;
+        background-color: #402F2C;
+    }
+
+    &__image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include a (laptop) {
+            display: none;
+        }
+    }
+}

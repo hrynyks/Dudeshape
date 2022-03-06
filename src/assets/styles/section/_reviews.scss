@@ -1,0 +1,117 @@
+.reviews {
+    padding-bottom: 130px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 54px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        max-width: 608px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: toRem(30);
+        font-weight: 500;
+        color: #222;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 45px;
+    }
+
+    &__descr {
+        font-size: toRem(20);
+        line-height: 32px;
+        color: $main-color;
+        margin: 0 0 79px 0;
+        position: relative;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/reviews-blockquote-left.png);
+            width: 17px;
+            height: 15px;
+            left: -20px;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/reviews-blockquote-right.png);
+            width: 17px;
+            height: 15px;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__name {
+        display: block;
+        font-size: toRem(30);
+        font-weight: 500;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    &__proffesion {
+        display: block;
+        font-size: toRem(20);
+        color: $main-color;
+        margin-bottom: 22px;
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-left {
+            border: 1px solid rgba(111, 181, 135, 0.15);
+            background-color: transparent;
+        }
+
+        &-right {
+            border: 1px solid #6FB587;
+            background-color: transparent;
+        }
+    }
+}

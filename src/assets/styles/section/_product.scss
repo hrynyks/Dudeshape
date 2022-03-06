@@ -1,0 +1,160 @@
+.product {
+    padding: 130px 0;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 60px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 700px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: toRem(56);
+        font-weight: 500;
+        color: $dark-color;
+    }
+
+    &__descr {
+        font-size: toRem(20);
+        line-height: 32px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__link {
+        font-size: toRem(24);
+        font-weight: 500;
+        color: #222;
+        text-decoration: underline;
+        padding-right: 28px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: url(/src/assets/images/product-arrow.png);
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 600px;
+        width: 100%;
+        border: 1px solid rgba(104, 90, 82, 0.19);
+
+        &-wrap {
+            padding: 32px;
+        }
+
+        &-title {
+            font-size: toRem(40);
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 16px;
+
+            @include a (tablet-xl) {
+                text-align: center;
+            }
+        }
+
+        &-descr {
+            font-size: toRem(20);
+            line-height: 32px;
+            max-width: 516px;
+            width: 100%;
+            margin-bottom: 48px;
+
+            @include a (tablet-xl) {
+                text-align: center;
+            }
+        }
+
+        &-wrap-2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include a (mobile) {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        &__btns {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            @include a (mobile) {
+                flex-direction: column;
+            }
+        }
+
+        &-btn {
+            font-size: toRem(18);
+            font-weight: 500;
+
+            &-left {
+                color: #fff;
+                text-align: center;
+                width: 137px;
+                line-height: 56px;
+                background-color: #402F2C;
+
+                @include a (mobile) {
+                    order: 1;
+                }
+            }
+
+            &-right {
+                color: #402F2C;
+                border: 1px solid rgba(104, 90, 82, 0.46);
+                text-align: center;
+                width: 162px;
+                line-height: 56px;
+                background-color: transparent;
+            }
+        }
+
+        &-num {
+            font-size: toRem(30);
+            font-weight: 500;
+            color: #222;
+        }
+    }
+}

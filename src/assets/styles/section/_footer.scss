@@ -1,0 +1,120 @@
+.footer {
+    padding: 108px 0 52px;
+    background-color: #FAFAFA;
+
+    &-top__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 64px;
+        border-bottom: 1px solid #DDDDDD;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        font-size: toRem(36);
+        font-weight: 500;
+        color: #222;
+
+        &-sml {
+            font-size: toRem(20);
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 39px;
+
+            @include a (tablet-xl) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__form {
+        max-width: 386px;
+        width: 100%;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 18px;
+
+        &::placeholder {
+            color: $main-color;
+        }
+    }
+
+    &__btn {
+        font-size: toRem(14);
+        font-weight: 500;
+        color: #fff;
+        width: 103px;
+        line-height: 40px;
+        background-color: #402F2C;
+        text-align: center;
+    }
+
+    &-bot__wrap {
+        padding-top: 59px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &-item {
+        max-width: 326px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 38px;
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 32px;
+        color: $main-color;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include a (tablet-xl) {
+            align-items: center;
+        }
+    }
+
+    &__item {
+        &-link {
+            color: #222;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+}

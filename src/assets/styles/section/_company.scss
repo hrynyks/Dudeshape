@@ -1,0 +1,27 @@
+.company {
+    padding: 130px 0;
+
+    &__items {
+        border-top: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        display: grid;
+        grid-template-columns: repeat(6, 122px);
+        justify-content: space-between;
+        place-items: center;
+        padding: 44px 0;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(3, 122px);
+            gap: 40px;
+        }
+
+        @include a (tablet) {
+            grid-template-columns: repeat(2, 122px);
+            justify-content: space-around;
+        }
+
+        @include a (mobile) {
+            grid-template-columns: 122px;
+        }
+    }
+}

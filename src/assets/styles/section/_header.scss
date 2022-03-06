@@ -1,0 +1,65 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 40px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__item {
+        &-link {
+            color: #222;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &-top {
+            width: 14px;
+            height: 3px;
+            background-color: #222;
+            margin-left: auto;
+        }
+
+        &-middle {
+            width: 20px;
+            height: 3px;
+            background-color: #222;
+            margin: 0 auto;
+        }
+
+        &-bot {
+            width: 14px;
+            height: 3px;
+            background-color: #222;
+        }
+    }
+}
